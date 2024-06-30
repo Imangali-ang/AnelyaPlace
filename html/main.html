@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love Anelya</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .header {
+            background-color: pink;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .footer {
+            background-color: pink;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .header h1 {
+            margin: 10px 0 5px 0;
+        }
+        .header h2 {
+            margin: 5px 0;
+            font-weight: normal;
+        }
+        .header .btn {
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .footer .yesBtn {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .footer .noBtn {
+            background-color: #FF0000;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .section {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section .overlay {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size:14px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .section .overа {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size:14px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="smile.jpeg" alt="Anelya">
+            <h1>For My Love Anelya ❤️</h1>
+            <h2>Made by Imangali</h2>
+            <p>With Infinity ∞ Love</p>
+            <button class="btn" onclick="playMusic()">PLAY MUSIC ▶️</button>
+            <audio id="myAudio" src="music.mp3"></audio>
+        </div>
+        <div class="section" style="background-image: url('vokzal.jpeg'); box-shadow: inset 0 0 10000px rgba(0, 0, 0, 0.7);">
+            <div class="overlay">
+                Твои глаза — как звезды в темной ночи,<br>
+                Светятся, как лучи солнечного дня.<br>
+                Твоя улыбка, как первый весенний луч,<br>
+                Озаряет мой мир, наполняет его светом.
+            </div>
+        </div>
+        <div class="section" style="background-image: url('flow.jpeg'); box-shadow: inset 0 0 10000px rgba(0, 0, 0, 0.7);">
+            <div class="overlay">
+                Ты принимаешь меня таким, какой я есть,<br>
+                Твоя забота нежная, как теплый ветер.<br>
+                С тобой каждый день как чудесный миг,<br>
+                Мы вместе навсегда, в наших сердцах любовь.
+            </div>
+        </div>
+        <div class="section" style="background-image: url('rest.jpeg'); box-shadow: inset 0 0 10000px rgba(0, 0, 0, 0.7);">
+            <div class="overа">
+                Твоя поддержка, как крепкая стена,<br>
+                На которую я могу опереться в трудную минуту.<br>
+                Ты беспокоишься обо мне, словно ангел-хранитель,<br>
+                И я благодарен тебе за каждое мгновение вместе.
+            </div>
+        </div>
+        <div class="section" style="background-image: url('suster.jpeg'); box-shadow: inset 0 0 10000px rgba(0, 0, 0, 0.7);">
+            <div class="overlay">
+                Анеля, ты — моя муза, мое вдохновение,<br>
+                С тобой каждый день — это новая радость.<br>
+                Твоя любовь для меня — драгоценный дар,<br>
+                И я обещаю ценить её всегда, навсегда.
+            </div>
+        </div>
+        <div class="footer">
+            <h1>Do u love me❤️?</h1>
+            <button class="yesBtn" onclick="yes()">YES🥰</button>
+            <button class="noBtn" id="noBtn" onclick="nope()">NO🙁</button>
+        </div>
+    </div>
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('myAudio');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function nope() {
+            alert("Подумай еще раз🥹");
+        }
+
+        function yes() {
+            alert("Я тоже тебя люблю! 🥰");
+        }
+    </script>
+</body>
+</html>
